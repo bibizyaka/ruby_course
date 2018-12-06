@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+     <div class='col-sm-3'>
+    <form action="/contacts" method="POST" role="form">
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input name = "email" type="email" class="form-control" placeholder="Email" value="<%=@email%>">
+      </div>
+      <div class="form-group">
+        <label for="textarea">Comments</label><br/>
+        <textarea name="comments" class="form-control" rows="3"><%=@comments%></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>
+</div>

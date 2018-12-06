@@ -1,0 +1,54 @@
+<h2>Sign In</h2>
+<p>На этой странице вы сможете записаться к нам в Barber Shop</p>
+
+<form action="/visit" method="POST" role="form">
+  <div class="container">
+    <div class="row">
+        <div class='col-sm-6'>
+            <div class="form-group">
+              <label>Your Name</label>
+              <input name="username" id="username" type="text" class="form-control" placeholder="Ваше имя" value="<%=@user_name%>">
+            </div>
+
+            <div class="form-group">
+              <label>Your Phone</label>
+              <input name="phone" type="tel" class="form-control" placeholder="Ваш телефон" value="<%=@phone%>">
+            </div>
+
+            <div class="form-group">
+              <label for="barber">Select Barber</label>
+            <select class="form-control" name="barber" id="barber">
+             <option value="Walter White">Walter White</option>
+             <option value="Jessie Pinkman">Jessie Pinkman</option>
+             <option value="Gus Fring">Gus Fring</option>
+            </select>
+          </div>
+
+            <div class="form-group">
+              <label>When To Expect You?</label>
+                 <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' class="form-control" name = "date_t" value="<%=@date%>" />
+                     <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                     </span>
+                 </div>
+              </div>
+         
+           <script type="text/javascript">
+            $(function () { // doc ready func
+     
+                $('#datetimepicker1').datetimepicker();
+                $("#username").css("background-color","yellow");
+                
+            });
+            
+        </script>
+        </div> <!--row -->
+    </div> <!-- col sm 6 -->
+      
+    <button type="submit" class="btn btn-primary">Sign In</button>
+  </div><!-- container -->
+</form>
+
+
+
